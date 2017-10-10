@@ -797,6 +797,9 @@ public class NfcService implements DeviceHostListener {
     }
 
     final class NfcAdapterService extends INfcAdapter.Stub {
+        public IBinder getNfcAdapterVendorInterface(String vendor) {
+            return null;
+        }
         @Override
         public boolean enable() throws RemoteException {
             NfcPermissions.enforceAdminPermissions(mContext);
